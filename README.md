@@ -21,7 +21,7 @@ This Streamlit web application is designed for data analysts and marketers to ev
 
 1. Clone this repository: 
    ```bash
-   git clone [https://github.com/your-username/your-repository.git](https://github.com/your-username/your-repository.git)
+   git clone [https://github.com/benjaminjvdm/AB-Calculator.git](https://github.com/benjaminjvdm/AB-Calculator.git)
    ```
 
 2. Install dependencies:
