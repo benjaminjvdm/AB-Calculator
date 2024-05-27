@@ -27,7 +27,7 @@ with st.sidebar:
         """
     )
 
-st.title("A/B Test Calculator by Moon Benjee (문벤지)")
+st.title("A/B Test Calculator by Moon Benjee")
 
 # Create tabs
 tab1, tab2 = st.tabs(["Main Results", "Additional Metrics"])
