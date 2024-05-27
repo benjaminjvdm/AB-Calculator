@@ -4,6 +4,28 @@ from scipy.stats import chi2_contingency, norm
 import matplotlib.pyplot as plt
 from statsmodels.stats.power import GofChisquarePower
 from statsmodels.stats.proportion import proportion_effectsize
+import requests
+
+# --- Sidebar: About the Author ---
+with st.sidebar:
+    st.subheader("About the Author")
+
+    # Fetch image
+    image_url = "https://avatars.githubusercontent.com/u/97449931?v=4"
+    response = requests.get(image_url)
+
+    if response.status_code == 200:
+        image = response.content
+        st.image(image, caption="Moon Benjee (문벤지)", use_column_width=True)  # Display image with caption
+    else:
+        st.write("Image not found.")
+
+    st.markdown(
+        """
+        This app was created by **Moon Benjee (문벤지)**. 
+        You can connect with me on: [LinkedIn](https://www.linkedin.com/in/benjaminjvdm/)
+        """
+    )
 
 st.title("A/B Test Calculator by Moon Benjee (문벤지)")
 
