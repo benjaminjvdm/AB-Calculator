@@ -10,15 +10,14 @@ import requests
 with st.sidebar:
     st.subheader("About the Author")
 
-    # Fetch image
     image_url = "https://avatars.githubusercontent.com/u/97449931?v=4"
-    response = requests.get(image_url)
-
-    if response.status_code == 200:
+    try:
+        response = requests.get(image_url)
+        response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
         image = response.content
-        st.image(image, caption="Moon Benjee (문벤지)", use_column_width=True)  # Display image with caption
-    else:
-        st.write("Image not found.")
+        st.image(image, caption="Moon Benjee (문벤지)", use_column_width=True)
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error loading image: {e}")  # Use st.error for better visibility
 
     st.markdown(
         """
@@ -26,6 +25,10 @@ with st.sidebar:
         You can connect with me on: [LinkedIn](https://www.linkedin.com/in/benjaminjvdm/)
         """
     )
+
+    st.sidebar.markdown("---")
+    st.sidebar.text("Built with ❤️ by Benjee(문벤지)")
+
 
 st.title("A/B Test Calculator")
 
