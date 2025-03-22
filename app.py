@@ -26,7 +26,7 @@ st.sidebar.markdown(
 )
 
 st.title("A/B Test Calculator")
-
+st.set_page_config(page_title="A/B Test Calculator", page_icon="🧠")
 # Create tabs
 tab1, tab2 = st.tabs(["Main Results", "Additional Metrics"])
 
