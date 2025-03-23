@@ -6,6 +6,8 @@ from statsmodels.stats.power import GofChisquarePower
 from statsmodels.stats.proportion import proportion_effectsize
 import requests
 
+st.set_page_config(page_title="A/B Test Calculator", page_icon="🧠")
+
 st.sidebar.subheader("About the Author")
 
 image_url = "https://github.com/benjaminjvdm/streamlit-author/blob/main/Untitled%20design(1)(1).png?raw=true"
@@ -26,7 +28,6 @@ st.sidebar.markdown(
 )
 
 st.title("A/B Test Calculator")
-st.set_page_config(page_title="A/B Test Calculator", page_icon="🧠")
 # Create tabs
 tab1, tab2 = st.tabs(["Main Results", "Additional Metrics"])
 
